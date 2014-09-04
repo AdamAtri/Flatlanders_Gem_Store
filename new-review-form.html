@@ -1,0 +1,26 @@
+<!-- ANGULAR.js VALIDATION -->
+<form name="reviewForm"
+      ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)"
+      novalidate>
+    <h4>New Review Preview:</h4>
+    <blockquote class="reviewPanel">
+        <b>{{reviewCtrl.review.stars}} Stars -</b>
+        {{reviewCtrl.review.body}}</br>
+        <cite>- {{reviewCtrl.review.author}}</cite>
+    </blockquote>
+    <label for="stars" >Stars: </label>
+    <select id="stars" class="form-control" ng-model="reviewCtrl.review.stars" required>
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+    </select><br>
+    <label for="reviewBody">Your Review: </label>
+    <textarea id="reviewBody" class="form-control" ng-model="reviewCtrl.review.body" required
+              placeholder="Put your review here."></textarea><br>
+    <label for="author">By: </label>
+    <input type="email" id="author" class="form-control" ng-model="reviewCtrl.review.author" required
+           placeholder="someone@something.com"/><br>
+    <input type="submit" value="Submit" class="form-control formSubmit"/>
+</form>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flatlanders Gem Store</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="FlatlandersStyle.css" />
+</head>
+<body>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="FlatlandersApp.js"></script>
+<script type="text/javascript" src="FlatlandersProducts.js"></script>
+    <header>
+        <h1>Flatlanders Gems</h1>
+        <h2>An exercise in AngularJS</h2>
+    </header>
+    <section id="mainSection" ng-controller="StoreController as store">
+        <article id="mainArticle">
+            <div ng-repeat="product in store.products" ng-hide="product.soldOut">
+                <div product-title></div>
+                <img ng-src="{{product.images[0].full}}" />
+                <div class="gallery" ng-show="product.images.length">
+                    <ul class="img-thumbnails clearfix">
+                        <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+                            <a href ng-click="store.alert('hello')"><img ng-src="{{image.thumb}}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <section ng-controller="PanelController as panel">
+                <div class="panel-group">
+                    <ul class="nav nav-pills nav-header">
+                        <li ng-class="{active:panel.isSelected(1)}">
+                            <a href ng-click="panel.setTab(1)">Description</a></li>
+                        <li ng-class="{active:panel.isSelected(2)}">
+                            <a href ng-click="panel.setTab(2)">Specifications</a></li>
+                        <li ng-class="{active:panel.isSelected(3)}">
+                            <a href ng-click="panel.setTab(3)">Reviews</a></li>
+                    </ul>
+                    <div class="panel" ng-show="panel.isSelected(1)">
+                        <product-description></product-description>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(2)">
+                        <div class="panel-body">
+                            <h4>Specifications</h4>
+                            <blockquote>None Yet</blockquote>
+                        </div>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(3)">
+                        <div class="panel-body">
+                            <h4>Reviews</h4><hr />
+                            <blockquote class="reviewPanel" ng-repeat="review in product.reviews">
+                                <b>Stars: {{review.stars}} -</b>
+                                {{review.body}}</br>
+                                <cite>- {{review.author}}</cite>
+                            </blockquote>
+                            <hr />
+                            <!-- REVIEW FORM -->
+                            <new-review-form></new-review-form>
+                            <!-- END REVIEW FORM -->
+                        </div>
+                    </div>
+                </div>
+
+                </section>
+                <button ng-click="store.addToCart(product)" ng-show="product.canPurchase">Add To Cart</button>
+                <hr><br>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

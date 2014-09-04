@@ -1,0 +1,55 @@
+body{
+    margin: 3% 10% ;
+    font-family: 'Century Gothic' Tahoma sans-serif;
+    
+}
+
+header {
+    border-bottom: 3px solid #1177BB;
+}
+
+header h1{
+    font-size:350%;
+}
+
+form input, form select, form textarea{
+    margin: 2em, 4em;
+    width: 200px;
+}
+
+blockquote{
+    font-size: 100%;
+}
+
+.nav-header{
+    border-bottom: 2px solid #2277AA;
+    padding-bottom: 1px;
+}
+.panel-group{
+    border: 2px solid #2288BB;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.formSubmit{
+    color: #FFFFFF;
+    background: #2277AA;
+}
+.reviewPanel {
+    width: 75%;
+}
+.reviewPanel cite{
+    padding: 2em;
+}
+
+.ng-invalid.ng-dirty{
+    border-color: #FF0000;
+}
+
+.ng-valid.ng-dirty{
+    border-color: #00FF00;
+}
+
+.price {
+    font-size: 150%;
+}

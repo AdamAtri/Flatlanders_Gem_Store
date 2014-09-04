@@ -1,0 +1,76 @@
+[    {
+        "name": "Dodecahedron",
+        "price": 2.95,
+        "description": "In geometry, a dodecahedron is any polyhedron with twelve flat faces, but usually a regular dodecahedron is meant: a Platonic solid",
+        "canPurchase": true,
+        "soldOut": false,
+        "images":[
+            {
+                "full":"images/dodecahedron.jpg",
+                "thumb":"images/dodecahedron_thumb.png"
+            }
+        ],
+        "reviews":[
+            {
+                "stars":4,
+                "body":"a decent value for the price.",
+                "author":"CheApSkate@saveabuck.com"
+            },
+            {
+                "stars":3,
+                "body":"what a peice of garbage...no matter how much it cost.",
+                "author":"naysayer@spite.com"
+            }
+        ]
+    },
+    {
+        "name": "Ruby",
+        "price": 110.00,
+        "description": "A ruby is a pink to blood-red colored gemstone, a variety of the mineral corundum (aluminium oxide). The red color is caused mainly by the presence of the element chromium. Its name comes from \"ruber\", Latin for red. ",
+        "canPurchase": true,
+        "soldOut": false,
+        "images":[
+            {
+                "full":"images/ruby.png",
+                "thumb":"images/rubythumb.gif"
+            }
+        ],
+        "reviews":[
+            {
+                "stars":4,
+                "body":"a decent value for the price.",
+                "author":"CheApSkate@saveabuck.com"
+            },
+            {
+                "stars":3,
+                "body":"what a piece of garbage...no matter how much it cost.",
+                "author":"naysayer@spite.com"
+            }
+        ]
+    },
+    {
+        "name": "Pyrope",
+        "price": 20.95,
+        "description": "The mineral pyrope is a member of the garnet group. Pyrope is the only member of the garnet family to always display red colouration in natural samples, and it is from this characteristic that it gets its name: from the Greek for fire and eye. ",
+        "canPurchase": true,
+        "soldOut": false,
+        "images":[
+            {
+                "full":"images/pyrope.jpg",
+                "thumb":"images/pyropethumb.jpg"
+            }
+        ],
+        "reviews":[
+            {
+                "stars":4,
+                "body":"a decent value for the price.",
+                "author":"CheApSkate@saveabuck.com"
+            },
+            {
+                "stars":3,
+                "body":"what a peice of garbage...no matter how much it cost.",
+                "author":"naysayer@spite.com"
+            }
+        ]
+    }
+]
